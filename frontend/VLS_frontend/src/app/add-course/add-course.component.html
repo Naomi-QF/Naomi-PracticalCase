@@ -1,0 +1,32 @@
+<div class="containerAddCourse">
+    <br>
+<h3>Add Courses</h3> <br>
+<!--Form to add new course -->
+    <form [formGroup]="addCourseForm">
+        <div class="alert alert-danger" role="alert" *ngIf="alertTime == true">
+            Time duration out of limits
+          </div>
+        <div>
+            <div class="form-group">
+                <label for="courseName">Course name:</label>
+                <input type="text" id="courseName" class="form-control" formControlName="courseName"><br>
+            </div>
+            <div class="form-group">
+                <label for="author">Author name: </label>
+                <input type="text" id="authorName" class="form-control" formControlName="authorName"><br>
+            </div>
+            <div class="form-group">
+                <label for="duration">Duration: </label>
+                <input type="text" id="duration" class="form-control" formControlName="duration"><br>
+            </div>
+            <div class="form-group">
+                <label for="availability">Availability </label>
+                <input type="text" id="availability" class="form-control" formControlName="availability"><br>
+            </div>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<button (click)="addCourse()" class="btn btn-success">Save</button> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button type="reset" class="btn btn-info">Clear</button>
+    </form>
+</div>

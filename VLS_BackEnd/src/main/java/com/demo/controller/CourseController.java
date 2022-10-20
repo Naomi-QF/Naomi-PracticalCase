@@ -30,6 +30,7 @@ public class CourseController {
 	@PostMapping("/api/course")
 	public CourseEntity addCourse(@RequestBody CourseEntity courseEntity) {
 		CourseEntity addedCourse = courseService.addCourse(courseEntity);
+		
 		return addedCourse;
 	}
 	

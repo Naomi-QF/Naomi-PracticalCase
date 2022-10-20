@@ -19,7 +19,7 @@ import com.demo.service.LoginService;
 public class LoginController {
 
 	@Autowired
-	private LoginService loginService;
+	LoginService loginService;
 	
 	@GetMapping("/getlogin")
 	List<LoginEntity> getUsers(){
